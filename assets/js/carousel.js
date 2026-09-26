@@ -21,8 +21,20 @@ class ServicesCarousel {
 
     this.touchStartX = 0;
     this.touchEndX = 0;
+    this.eventsBound = false;
 
     this.init();
+  }
+
+  reinit() {
+    this.wrapper = this.container.querySelector('.services-carousel-wrapper');
+    this.track = this.container.querySelector('.services-track');
+    this.cards = Array.from(this.container.querySelectorAll('.service-card'));
+    this.totalCards = this.cards.length;
+    this.currentIndex = 0;
+    this.mobileExpanded = false;
+    this.bindEvents();
+    this.updateLayout();
   }
 
   init() {
@@ -31,6 +43,9 @@ class ServicesCarousel {
   }
 
   bindEvents() {
+    if (this.eventsBound) return;
+    this.eventsBound = true;
+
     if (this.nextBtn) {
       this.nextBtn.addEventListener('click', () => {
         this.next();

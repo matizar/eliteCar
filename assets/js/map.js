@@ -14,6 +14,9 @@ const MapModule = {
 
   bindEvents() {
     this.pins.forEach((pin) => {
+      if (pin.dataset.bound) return;
+      pin.dataset.bound = 'true';
+
       // Toggle active pin on click/tap
       pin.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -30,10 +33,13 @@ const MapModule = {
       });
     });
 
-    // Close any active tooltip when clicking outside the map
-    document.addEventListener('click', () => {
-      this.pins.forEach((p) => p.classList.remove('active'));
-    });
+    if (!this.docClickBound) {
+      this.docClickBound = true;
+      // Close any active tooltip when clicking outside the map
+      document.addEventListener('click', () => {
+        this.pins.forEach((p) => p.classList.remove('active'));
+      });
+    }
   },
 
   trackEvent(action) {

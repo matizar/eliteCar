@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "breadcrumb": "Quiénes Somos",
+    "badge": "NUESTRA EMPRESA",
+    "title": "Innovación y Compromiso sobre Ruedas",
+    "lead": "Transformamos los retos logísticos de las empresas colombianas en experiencias de viaje confortables, seguras y de clase mundial."
+  },
+  "story": {
+    "badge": "HISTORIA & PROPÓSITO",
+    "title": "Más de una década conectando empresas",
+    "paragraphs": [
+      "EliteCar nació en Bogotá con la convicción de dignificar y modernizar el transporte especial de pasajeros en Colombia. Identificamos que las empresas requerían más que vehículos: necesitaban un aliado estratégico con capacidad de respuesta en tiempo real, trazabilidad satelital y conductores con vocación de servicio ejecutivo.",
+      "Hoy coordinamos la movilidad de más de 150 compañías nacionales y multinacionales en sectores bancario, farmacéutico, industrial, tecnológico y diplomático, operando con bases consolidadas en Bogotá, Medellín, Cali, Barranquilla y Cartagena."
+    ],
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80",
+    "alt": "Sede corporativa y operaciones de EliteCar"
+  },
+  "pillars": [
+    {
+      "key": "mision",
+      "label": "Misión",
+      "text": "Proveer soluciones de movilidad empresarial confiables, seguras e innovadoras que aporten valor a la productividad y bienestar de nuestros clientes."
+    },
+    {
+      "key": "vision",
+      "label": "Visión",
+      "text": "Ser el referente indiscutible de transporte corporativo en Colombia, liderando la adopción de tecnologías de telemetría y flotas ambientalmente sostenibles."
+    },
+    {
+      "key": "valores",
+      "label": "Valores",
+      "text": "Puntualidad inquebrantable, seguridad rigurosa, transparencia comercial y calidez en el trato humano."
+    }
+  ],
+  "metrics": [
+    {
+      "value": "+12",
+      "label": "Años de Trayectoria",
+      "detail": "Fundada y operando en Colombia"
+    },
+    {
+      "value": "+150",
+      "label": "Empresas Clientes",
+      "detail": "Contratos corporativos activos"
+    },
+    {
+      "value": "+1.2M",
+      "label": "Km Recorridos Anuales",
+      "detail": "Con cero siniestros graves"
+    },
+    {
+      "value": "100%",
+      "label": "Cumplimiento Legal",
+      "detail": "Habilitación MinTransporte"
+    }
+  ]
+}

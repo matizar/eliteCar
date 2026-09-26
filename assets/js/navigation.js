@@ -4,6 +4,8 @@
  */
 
 const NavigationModule = {
+  eventsBound: false,
+
   init() {
     this.header = document.querySelector('.site-header');
     this.menuToggle = document.querySelector('.menu-toggle');
@@ -16,33 +18,45 @@ const NavigationModule = {
   },
 
   bindEvents() {
-    // Scroll event for sticky header
-    window.addEventListener('scroll', () => this.handleScroll(), { passive: true });
+    // Global Scroll event for sticky header
+    if (!this.eventsBound) {
+      window.addEventListener('scroll', () => this.handleScroll(), { passive: true });
 
-    // Mobile Hamburger Menu Toggle
-    if (this.menuToggle && this.navMenu) {
-      this.menuToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isOpen = this.navMenu.classList.toggle('open');
-        this.menuToggle.classList.toggle('active', isOpen);
-        this.menuToggle.setAttribute('aria-expanded', isOpen);
+      // Mobile Hamburger Menu Toggle
+      if (this.menuToggle && this.navMenu) {
+        this.menuToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = this.navMenu.classList.toggle('open');
+          this.menuToggle.classList.toggle('active', isOpen);
+          this.menuToggle.setAttribute('aria-expanded', isOpen);
 
-        // Track menu toggle
-        this.trackEvent(isOpen ? 'menu_opened' : 'menu_closed');
-      });
+          // Track menu toggle
+          this.trackEvent(isOpen ? 'menu_opened' : 'menu_closed');
+        });
 
-      // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!this.header.contains(e.target) && this.navMenu.classList.contains('open')) {
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!this.header.contains(e.target) && this.navMenu.classList.contains('open')) {
+            this.closeMobileMenu();
+          }
+        });
+      }
+
+      // Close on resize if returning to desktop
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768 && this.navMenu && this.navMenu.classList.contains('open')) {
           this.closeMobileMenu();
         }
       });
+
+      this.eventsBound = true;
     }
 
     // Mobile Dropdown Accordion Toggle
     this.dropdownParents.forEach((parent) => {
       const link = parent.querySelector('.nav-link');
-      if (link) {
+      if (link && !link.dataset.bound) {
+        link.dataset.bound = 'true';
         link.addEventListener('click', (e) => {
           // On mobile view (< 768px), prevent default click and toggle accordion
           if (window.innerWidth < 768) {
@@ -56,18 +70,14 @@ const NavigationModule = {
 
     // Close mobile menu on nav link click (smooth anchor jump)
     this.navLinks.forEach((link) => {
-      link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-        if (href && href.startsWith('#')) {
-          this.closeMobileMenu();
-        }
-      });
-    });
-
-    // Close on resize if returning to desktop
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 768 && this.navMenu && this.navMenu.classList.contains('open')) {
-        this.closeMobileMenu();
+      if (!link.dataset.bound) {
+        link.dataset.bound = 'true';
+        link.addEventListener('click', () => {
+          const href = link.getAttribute('href');
+          if (href && (href.startsWith('#') || href.includes('#'))) {
+            this.closeMobileMenu();
+          }
+        });
       }
     });
   },

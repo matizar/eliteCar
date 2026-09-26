@@ -1,0 +1,119 @@
+{
+  "rutas-empresariales": {
+    "breadcrumb": "Rutas Empresariales",
+    "badge": "COMMUTING CORPORATIVO",
+    "title": "Rutas Empresariales para Personal",
+    "lead": "Conectamos a tus colaboradores de manera eficiente, puntual y segura entre sus hogares, plantas industriales y sedes corporativas.",
+    "sectionBadge": "OPTIMIZACIÓN DE TALENTO",
+    "sectionTitle": "Puntualidad y Bienestar para tu Equipo",
+    "paragraphs": [
+      "El tiempo de desplazamiento diario impacta directamente en el clima laboral, la retención de talento y la productividad. En EliteCar diseñamos redes de rutas inteligentes adaptadas a los turnos y zonas residenciales de tus colaboradores, optimizando paradas estratégicas y garantizando cumplimiento estricto de horarios."
+    ],
+    "features": [
+      {
+        "title": "Monitoreo Satelital y Control Digital",
+        "description": "Registro de ascensos y descensos, alertas preventivas de tráfico y control de velocidad."
+      },
+      {
+        "title": "Flota Diversificada y Confortable",
+        "description": "Vanes de 7 a 19 pasajeros, microbuses y buses climatizados con asientos reclinables y conectividad USB."
+      },
+      {
+        "title": "Conductores con Formación Defensiva",
+        "description": "Personal evaluado con pruebas psicotécnicas, toxicológicas y entrenamiento en primeros auxilios."
+      },
+      {
+        "title": "Pólizas de Seguro de Amplia Cobertura",
+        "description": "Responsabilidad Civil Contractual (RCC) y Extracontractual (RCE) según la normativa del Ministerio de Transporte."
+      }
+    ],
+    "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1000&q=80",
+    "alt": "Flota de vans ejecutivas para rutas empresariales",
+    "ctaQuote": {
+      "text": "SOLICITAR COTIZACIÓN DE RUTAS",
+      "link": "../index.html#contacto"
+    },
+    "ctaWhatsapp": {
+      "text": "CONSULTAR POR WHATSAPP",
+      "message": "Deseo cotizar rutas empresariales para transporte de colaboradores"
+    }
+  },
+  "transporte-aeropuerto": {
+    "breadcrumb": "Transporte Aeropuerto",
+    "badge": "TRASLADOS EJECUTIVOS VIP",
+    "title": "Transporte y Transfer Aeropuerto 24/7",
+    "lead": "Recepción preferencial, monitoreo de vuelos y traslados seguros para directivos, visitas comerciales y delegaciones internacionales.",
+    "sectionBadge": "EXCLUSIVIDAD Y CONFORT",
+    "sectionTitle": "Tu Tiempo y Seguridad son la Prioridad",
+    "paragraphs": [
+      "Evita pérdidas de tiempo en filas de taxis y demoras por tráfico imprevisto. Nuestro servicio de transporte aeropuerto garantiza un vehículo ejecutivo esperando en la puerta de desembarque de vuelos nacionales e internacionales, con recepción personalizada mediante tablet o paleta corporativa y asistencia integral de equipaje."
+    ],
+    "features": [
+      {
+        "title": "Monitoreo Satelital de Vuelos en Vivo",
+        "description": "Ajustamos automáticamente la hora de recogida ante retrasos o adelantos del vuelo."
+      },
+      {
+        "title": "Recepción en Puerta de Llegadas",
+        "description": "Conductor uniformado con identificación formal de tu empresa para mayor seguridad del viajero."
+      },
+      {
+        "title": "Sedanes Premium y Camionetas SUV",
+        "description": "Vehículos impecables con amenidades a bordo (agua purificada, toallitas refrescantes, Wi-Fi y cargadores)."
+      },
+      {
+        "title": "Conductores Bilingües Bajo Solicitud",
+        "description": "Asistencia en inglés para ejecutivos y clientes internacionales."
+      }
+    ],
+    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+    "alt": "Vehículo ejecutivo en terminal aérea para transporte corporativo",
+    "ctaQuote": {
+      "text": "RESERVAR TRASLADO AEROPUERTO",
+      "link": "../index.html#contacto"
+    },
+    "ctaWhatsapp": {
+      "text": "RESERVAR VÍA WHATSAPP",
+      "message": "Deseo reservar servicio de transporte y transfer al aeropuerto"
+    }
+  },
+  "alquiler-temporal": {
+    "breadcrumb": "Alquiler Temporal de Flota",
+    "badge": "RENTING CORPORATIVO FLEXIBLE",
+    "title": "Alquiler Temporal de Flota y Vehículos",
+    "lead": "Disponibilidad inmediata de sedanes, camionetas 4x4 y vanes para proyectos estacionales, auditorías o contingencias operativas.",
+    "sectionBadge": "MÁXIMA FLEXIBILIDAD OPERATIVA",
+    "sectionTitle": "Flota Lista Sin Descapitalizar tu Empresa",
+    "paragraphs": [
+      "El alquiler temporal de vehículos para empresas es la alternativa más inteligente para suplir picos de demanda o atender proyectos de ingeniería, minería, consultoría o supervisión de obra sin incurrir en compras de activos fijos ni asumir depreciaciones mecánicas."
+    ],
+    "features": [
+      {
+        "title": "Modalidad Con o Sin Conductor",
+        "description": "Personal capacitado asignado o entrega de automotores bajo acta de inventario digital rigurosa."
+      },
+      {
+        "title": "Mantenimiento y Vehículo Sustituto",
+        "description": "Cero paradas operativas; ante cualquier mantenimiento o imprevisto técnico, suministramos vehículo de reemplazo inmediato."
+      },
+      {
+        "title": "Plazos a la Medida",
+        "description": "Alquiler por días, semanas o meses con tarifas preferenciales y facturación electrónica deducible 100% de impuestos."
+      },
+      {
+        "title": "Seguros Todo Riesgo Empresarial",
+        "description": "Cobertura ante colisiones, hurto y responsabilidad civil sin sorpresas ni deducibles ocultos."
+      }
+    ],
+    "image": "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1000&q=80",
+    "alt": "Camioneta ejecutiva disponible para alquiler temporal",
+    "ctaQuote": {
+      "text": "SOLICITAR COTIZACIÓN DE FLOTA",
+      "link": "../index.html#contacto"
+    },
+    "ctaWhatsapp": {
+      "text": "CONSULTAR POR WHATSAPP",
+      "message": "Deseo cotizar alquiler temporal de vehículos y camionetas"
+    }
+  }
+}

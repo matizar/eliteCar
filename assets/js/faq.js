@@ -16,20 +16,36 @@ class FAQAccordion {
     this.init();
   }
 
+  reinit(options = {}) {
+    this.items = Array.from(this.container.querySelectorAll('.faq-item'));
+    this.loadMoreBtn = this.container.querySelector('.btn-faq-load-more');
+    if (options.initialDisplay !== undefined) this.initialCount = options.initialDisplay;
+    this.showingAll = false;
+    this.setupInitialDisplay();
+    this.bindEvents();
+    const defaultOpen = options.defaultOpen !== undefined ? options.defaultOpen : 0;
+    if (this.items.length > defaultOpen && defaultOpen >= 0) {
+      this.openItem(this.items[defaultOpen], false);
+    }
+  }
+
   init() {
     this.setupInitialDisplay();
     this.bindEvents();
   }
 
   setupInitialDisplay() {
-    // Limit initial display to 5 questions if loadMoreBtn exists
+    // Limit initial display to initialCount questions if loadMoreBtn exists
     if (this.loadMoreBtn && this.items.length > this.initialCount) {
       this.items.forEach((item, idx) => {
         if (idx >= this.initialCount) {
           item.style.display = 'none';
+        } else {
+          item.style.display = 'block';
         }
       });
       this.loadMoreBtn.style.display = 'inline-flex';
+      this.loadMoreBtn.textContent = `MOSTRAR MÁS PREGUNTAS (${this.items.length - this.initialCount} MÁS)`;
     } else if (this.loadMoreBtn) {
       this.loadMoreBtn.style.display = 'none';
     }
@@ -43,7 +59,8 @@ class FAQAccordion {
   bindEvents() {
     this.items.forEach((item) => {
       const trigger = item.querySelector('.faq-trigger');
-      if (trigger) {
+      if (trigger && !trigger.dataset.bound) {
+        trigger.dataset.bound = 'true';
         trigger.addEventListener('click', () => {
           this.toggleItem(item);
         });
@@ -58,7 +75,8 @@ class FAQAccordion {
       }
     });
 
-    if (this.loadMoreBtn) {
+    if (this.loadMoreBtn && !this.loadMoreBtn.dataset.bound) {
+      this.loadMoreBtn.dataset.bound = 'true';
       this.loadMoreBtn.addEventListener('click', () => {
         this.toggleLoadMore();
       });

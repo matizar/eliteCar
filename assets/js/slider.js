@@ -26,8 +26,31 @@ class HeroSlider {
     this.touchStartX = 0;
     this.touchEndX = 0;
     this.isPaused = false;
+    this.eventsBound = false;
 
     this.init();
+  }
+
+  reinit(options = {}) {
+    if (this.timer) clearInterval(this.timer);
+    this.track = this.container.querySelector('.slider-track');
+    this.slides = Array.from(this.container.querySelectorAll('.slide-item'));
+    this.slidesCount = this.slides.length;
+    this.currentIndex = 0;
+    this.isPaused = false;
+
+    if (options.autoplay !== undefined) this.options.autoplay = options.autoplay;
+    if (options.autoplayDelay !== undefined) this.options.autoplayDelay = options.autoplayDelay;
+
+    if (this.slidesCount === 0) return;
+
+    this.renderDots();
+    this.bindEvents();
+    this.updateSlider();
+
+    if (this.options.autoplay) {
+      this.startAutoplay();
+    }
   }
 
   init() {
@@ -61,6 +84,9 @@ class HeroSlider {
   }
 
   bindEvents() {
+    if (this.eventsBound) return;
+    this.eventsBound = true;
+
     // Arrow Navigation
     if (this.nextBtn) {
       this.nextBtn.addEventListener('click', () => {
