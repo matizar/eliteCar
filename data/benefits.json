@@ -1,0 +1,46 @@
+{
+  "title": "¿Por qué elegirnos?",
+  "subtitle": "Excelencia, seguridad y respaldo comprobado en cada kilómetro recorrido.",
+  "items": [
+    {
+      "id": "seguridad",
+      "icon": "shield",
+      "title": "Seguridad Integral",
+      "description": "Pólizas de responsabilidad civil contractual y extracontractual con amplia cobertura, además de protocolos estrictos de seguridad vial."
+    },
+    {
+      "id": "tecnologia",
+      "icon": "telemetry",
+      "title": "Tecnología y Telemetría",
+      "description": "Seguimiento satelital GPS en tiempo real, alertas de velocidad, trazabilidad de rutas y reportes de desempeño para tu empresa."
+    },
+    {
+      "id": "calidad",
+      "icon": "quality",
+      "title": "Calidad Certificada",
+      "description": "Procesos estandarizados bajo normas de calidad ISO y protocolos de bioseguridad permanente en toda la flota de vehículos."
+    },
+    {
+      "id": "mantenimiento",
+      "icon": "maintenance",
+      "title": "Mantenimiento Riguroso",
+      "description": "Inspecciones técnico-mecánicas periódicas y mantenimiento preventivo continuo en talleres autorizados para cero imprevistos."
+    },
+    {
+      "id": "conductores",
+      "icon": "handshake",
+      "title": "Conductores Profesionales",
+      "description": "Personal cuidadosamente seleccionado, capacitado en conducción defensiva, primeros auxilios y protocolo de atención ejecutiva."
+    },
+    {
+      "id": "facturacion",
+      "icon": "invoice",
+      "title": "Facturación Transparente",
+      "description": "Consolidación de cuentas clara, facturación electrónica discriminada por centro de costos y tarifas corporativas competitivas."
+    }
+  ],
+  "cta": {
+    "text": "SOLICITAR PROPUESTA COMERCIAL",
+    "link": "#contacto"
+  }
+}

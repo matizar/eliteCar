@@ -1,0 +1,35 @@
+{
+  "title": "ELITECAR - SOLUCIONES DE TRANSPORTE CORPORATIVO",
+  "badge": "LIDERAZGO EN MOVILIDAD",
+  "lead": "Transformamos la logística de transporte de tu organización en una ventaja competitiva de alto rendimiento.",
+  "columns": [
+    {
+      "paragraph": "En EliteCar entendemos que la puntualidad, seguridad y el bienestar de tus colaboradores e invitados de negocios son factores estratégicos. Desarrollamos soluciones integrales de movilidad empresarial a la medida de tu operación, garantizando trazabilidad total y máxima eficiencia operativa."
+    },
+    {
+      "paragraph": "Contamos con una moderna flota de sedanes ejecutivos, camionetas SUV y vans de última generación, conducidas por profesionales certificados en manejo defensivo y servicio de protocolo. Nuestros modelos de contratación flexible se adaptan a itinerarios fijos, necesidades estacionales o proyectos especiales en todo el territorio nacional."
+    }
+  ],
+  "metrics": [
+    {
+      "value": "+12",
+      "label": "Años de experiencia",
+      "detail": "En movilidad corporativa"
+    },
+    {
+      "value": "99.8%",
+      "label": "Índice de puntualidad",
+      "detail": "Monitoreado en tiempo real"
+    },
+    {
+      "value": "100%",
+      "label": "Flota asegurada",
+      "detail": "Pólizas contractuales y extracontractuales"
+    },
+    {
+      "value": "24/7",
+      "label": "Centro de control",
+      "detail": "Soporte operativo continuo"
+    }
+  ]
+}

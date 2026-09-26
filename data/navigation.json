@@ -1,0 +1,64 @@
+{
+  "logo": {
+    "text": "ELITECAR",
+    "tagline": "Soluciones de Movilidad Corporativa",
+    "badge": "EC"
+  },
+  "items": [
+    {
+      "label": "Inicio",
+      "path": "index.html",
+      "type": "anchor"
+    },
+    {
+      "label": "Servicios",
+      "path": "index.html#servicios",
+      "type": "dropdown",
+      "items": [
+        {
+          "label": "Rutas Empresariales",
+          "path": "services/rutas-empresariales.html",
+          "description": "Transporte recurrente para colaboradores"
+        },
+        {
+          "label": "Transporte Aeropuerto",
+          "path": "services/transporte-aeropuerto.html",
+          "description": "Traslados ejecutivos puntuales y seguros"
+        },
+        {
+          "label": "Alquiler Temporal",
+          "path": "services/alquiler-temporal.html",
+          "description": "Flota flexible por días, semanas o meses"
+        }
+      ]
+    },
+    {
+      "label": "¿Por qué elegirnos?",
+      "path": "index.html#beneficios",
+      "type": "anchor"
+    },
+    {
+      "label": "Quiénes Somos",
+      "path": "quienes-somos.html",
+      "type": "link"
+    },
+    {
+      "label": "FAQ",
+      "path": "index.html#faq",
+      "type": "anchor"
+    },
+    {
+      "label": "Contacto",
+      "path": "index.html#contacto",
+      "type": "anchor"
+    }
+  ],
+  "cta": {
+    "label": "COTIZAR AHORA",
+    "path": "index.html#contacto"
+  },
+  "behavior": {
+    "mobile": "inline-dropdown",
+    "servicesAnchor": true
+  }
+}

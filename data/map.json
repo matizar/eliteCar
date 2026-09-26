@@ -1,0 +1,59 @@
+{
+  "title": "COBERTURA NACIONAL Y CONTACTO",
+  "subtitle": "Presencia estratégica en las principales ciudades del país y corredores industriales.",
+  "companyInfo": {
+    "name": "EliteCar Soluciones de Transporte S.A.S.",
+    "headquarters": "Bogotá D.C., Colombia",
+    "address": "Carrera 7 # 116-50, Oficina 502, Bogotá",
+    "phone": "+57 (601) 745-8890",
+    "phoneMobile": "+57 310 890 1234",
+    "email": "contacto@elitecar.com.co",
+    "emailSales": "cotizaciones@elitecar.com.co",
+    "hours": "Lunes a Domingo, Atención Operativa 24/7",
+    "whatsappNumber": "573108901234",
+    "whatsappMessage": "Hola EliteCar, deseo solicitar información y cotización para transporte empresarial."
+  },
+  "interactive": true,
+  "pins": [
+    {
+      "id": "bogota",
+      "city": "Bogotá D.C.",
+      "show": true,
+      "coordinates": { "x": "52%", "y": "38%" },
+      "role": "Sede Principal y Centro de Control 24/7",
+      "description": "Flota permanente de +80 vehículos ejecutivos, vanes y transporte masivo."
+    },
+    {
+      "id": "medellin",
+      "city": "Medellín",
+      "show": true,
+      "coordinates": { "x": "32%", "y": "34%" },
+      "role": "Base Operativa Antioquia",
+      "description": "Servicios ejecutivos para el Valle de Aburrá, Rionegro y zonas industriales."
+    },
+    {
+      "id": "cali",
+      "city": "Cali",
+      "show": true,
+      "coordinates": { "x": "30%", "y": "56%" },
+      "role": "Base Operativa Valle del Cauca",
+      "description": "Transporte de personal para ingenios, parques industriales y transfer aeropuerto."
+    },
+    {
+      "id": "barranquilla",
+      "city": "Barranquilla",
+      "show": true,
+      "coordinates": { "x": "48%", "y": "14%" },
+      "role": "Base Caribe Norte",
+      "description": "Conexión ejecutiva portuaria, aeropuerto y corredores logísticos."
+    },
+    {
+      "id": "cartagena",
+      "city": "Cartagena",
+      "show": true,
+      "coordinates": { "x": "42%", "y": "18%" },
+      "role": "Base Operativa Eventos y Turismo Corporativo",
+      "description": "Atención especializada para convenciones, congresos internacionales y directivos."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "title": "PREGUNTAS FRECUENTES",
+  "subtitle": "Resolvemos tus inquietudes sobre nuestros servicios de transporte y contratación empresarial.",
+  "sideImage": {
+    "url": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1000&q=80",
+    "alt": "Camioneta SUV ejecutiva EliteCar frente a edificio corporativo",
+    "badge": "ATENCIÓN 24/7"
+  },
+  "initialDisplay": 5,
+  "defaultOpen": 0,
+  "questions": [
+    {
+      "id": 1,
+      "question": "¿Qué tipos de vehículos componen la flota de EliteCar?",
+      "answer": "Contamos con una flota moderna y diversificada que incluye sedanes ejecutivos, camionetas SUV 4x2 y 4x4, vans de 7 a 19 pasajeros y microbuses para transporte masivo de personal. Todos los modelos cuentan con aire acondicionado, conectividad, cinturones de seguridad en todas las plazas y monitoreo satelital."
+    },
+    {
+      "id": 2,
+      "question": "¿Cómo se realiza el proceso de contratación y facturación para empresas?",
+      "answer": "Diseñamos un contrato marco de prestación de servicios ajustado a las necesidades de tu empresa (tiempo fijo, por demanda o bolsa de horas). La facturación se emite de forma electrónica quincenal o mensual, acompañada de un informe detallado de servicios, fechas, usuarios transportados y centros de costos."
+    },
+    {
+      "id": 3,
+      "question": "¿Qué coberturas y pólizas de seguro respaldan los traslados?",
+      "answer": "Todos nuestros servicios operan con pólizas de Responsabilidad Civil Contractual (RCC) y Extracontractual (RCE) vigentes ante el Ministerio de Transporte de Colombia, con coberturas extendidas que protegen a los pasajeros, equipaje y terceros durante todo el trayecto."
+    },
+    {
+      "id": 4,
+      "question": "¿Cuál es la anticipación requerida para solicitar un servicio de aeropuerto o viaje especial?",
+      "answer": "Para traslados ejecutivos al aeropuerto recomendamos reservar con un mínimo de 4 a 6 horas de anticipación. Para eventos corporativos de gran escala o rutas continuas de personal, coordinamos la logística con 48 horas previas para garantizar asignación de flota dedicada y verificación de itinerarios."
+    },
+    {
+      "id": 5,
+      "question": "¿Cómo garantizan la puntualidad y el seguimiento de las rutas?",
+      "answer": "Nuestra central operativa monitorea el 100% de los vehículos mediante telemetría GPS en tiempo real. Esto nos permite anticipar congestiones de tráfico, ajustar rutas dinámicas, controlar límites de velocidad y enviar notificaciones de llegada tanto al coordinador de la empresa como al usuario."
+    },
+    {
+      "id": 6,
+      "question": "¿Los conductores cuentan con formación y certificación profesional?",
+      "answer": "Sí, nuestros conductores pasan por rigurosos exámenes psicotécnicos, verificación de antecedentes y capacitaciones periódicas en manejo defensivo, primeros auxilios, normatividad vial nacional y protocolo de atención ejecutiva y confidencialidad."
+    },
+    {
+      "id": 7,
+      "question": "¿Ofrecen cobertura a nivel nacional o únicamente en ciudades principales?",
+      "answer": "Tenemos centros de operación y base permanente en Bogotá, Medellín, Cali, Barranquilla y Cartagena, y prestamos servicios intermunicipales y departamentales en todo el territorio colombiano según el requerimiento de tu compañía."
+    },
+    {
+      "id": 8,
+      "question": "¿Disponen de vehículos blindados para ejecutivos o delegaciones de alta seguridad?",
+      "answer": "Sí, disponemos de camionetas SUV y vehículos blindados niveles II, III y IV con conductores escolta certificados por la Superintendencia de Vigilancia y Seguridad Privada, previa programación y evaluación de protocolo de seguridad."
+    }
+  ]
+}
