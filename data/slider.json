@@ -15,39 +15,29 @@
       "alt": "Flota de vehículos ejecutivos y movilidad corporativa en ciudad",
       "badge": "MOVILIDAD EMPRESARIAL",
       "title": "Movilidad empresarial que se adapta a tu operación",
-      "subtitle": "Transporte corporativo puntual, seguro y tecnológicamente respaldado en toda Colombia.",
+      "subtitle": "Transportamos a tus colaboradores de forma segura, puntual y organizada, con soluciones ajustadas a las necesidades de cada empresa.",
       "ctaText": "CONOCE NUESTRAS SOLUCIONES",
       "ctaLink": "#servicios"
     },
     {
       "id": 2,
-      "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1920&q=80",
+      "image": "assets/images/hero/hero_02_servicio-vip.webp",
       "alt": "Transporte de personal y rutas corporativas seguras",
-      "badge": "PUNTUALIDAD GARANTIZADA",
-      "title": "Rutas estratégicas para optimizar tu talento humano",
-      "subtitle": "Conecta tus sedes y traslada a tu equipo con los más altos estándares de bioseguridad y confort.",
-      "ctaText": "SOLICITAR COTIZACIÓN",
+      "badge": "SERVICIO VIP",
+      "title": "Una experiencia ejecutiva en cada traslado.",
+      "subtitle": "Transporte VIP con atención personalizada, altos estándares de servicio y soluciones pensadas para tus pasajeros más importantes.",
+      "ctaText": "Solicitar servicio VIP",
       "ctaLink": "#contacto"
     },
     {
       "id": 3,
-      "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80",
+      "image": "assets/images/hero/hero_03_tecnologia.webp",
       "alt": "Vehículo ejecutivo de alta gama para traslados y aeropuerto",
-      "badge": "SERVICIO VIP Y AEROPUERTO",
-      "title": "Traslados ejecutivos y transfer aeropuerto 24/7",
-      "subtitle": "Atención personalizada para directivos, visitas comerciales y delegaciones corporativas.",
-      "ctaText": "VER DETALLES DEL SERVICIO",
+      "badge": "TECNOLOGÍA",
+      "title": "Tecnología para tener el control de cada viaje.",
+      "subtitle": "Integramos tecnología y gestión operativa para facilitar la programación, seguimiento y trazabilidad de tus servicios de transporte.",
+      "ctaText": "Conoce nuestra tecnología",
       "ctaLink": "services/transporte-aeropuerto.html"
-    },
-    {
-      "id": 4,
-      "image": "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1920&q=80",
-      "alt": "Flota moderna de camionetas SUV y vans corporativas",
-      "badge": "COBERTURA NACIONAL",
-      "title": "Flota moderna monitoreada por telemetría GPS en tiempo real",
-      "subtitle": "Control exhaustivo de velocidad, rutas optimizadas y respuesta inmediata en carretera.",
-      "ctaText": "DESCUBRE NUESTRA FLOTA",
-      "ctaLink": "#servicios"
     }
   ]
 }
