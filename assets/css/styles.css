@@ -2072,3 +2072,167 @@ textarea.form-control {
     border-bottom: none;
   }
 }
+
+/* Brevo contact form styled to match the EliteCar contact card */
+#contact-form-card .sib-form {
+  background: transparent;
+  padding: 0;
+  text-align: left;
+}
+
+#contact-form-card #sib-container {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-text-primary);
+}
+
+#contact-form-card #sib-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+#contact-form-card #sib-form > .sib-form-block,
+#contact-form-card #sib-form > .sib-sms-field,
+#contact-form-card #sib-form > .sib-form-city {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+#contact-form-card #sib-form > .sib-form-heading,
+#contact-form-card #sib-form > .sib-form-city,
+#contact-form-card #sib-form > .sib-form-submit,
+#contact-form-card #sib-form > .sib-form-request {
+  grid-column: 1 / -1;
+}
+
+#contact-form-card #sib-form > .sib-form-heading {
+  display: none;
+}
+
+#contact-form-card .form__entry,
+#contact-form-card .form__label-row {
+  width: 100%;
+}
+
+#contact-form-card .entry__label {
+  display: block;
+  margin: 0 0 6px;
+  color: var(--color-text-primary);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-align: left;
+}
+
+#contact-form-card .entry__field {
+  width: 100%;
+  margin: 0;
+}
+
+#contact-form-card .entry__field .input,
+#contact-form-card .sib-sms-input .input {
+  width: 100%;
+  min-width: 0;
+  height: 54px;
+  padding: 0 16px;
+  border: 1px solid #CCCCCC;
+  border-radius: var(--radius-sm);
+  background: #FFFFFF;
+  color: var(--color-text-primary);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  text-align: left;
+  box-shadow: none;
+}
+
+#contact-form-card .entry__field .input:focus,
+#contact-form-card .sib-sms-input .input:focus {
+  border-color: #c7a402;
+  box-shadow: 0 0 0 3px rgba(242, 205, 22, 0.25);
+  outline: none;
+}
+
+#contact-form-card .sib-sms-input {
+  display: grid;
+  grid-template-columns: minmax(92px, 0.35fr) minmax(0, 1fr);
+  gap: var(--space-2);
+}
+
+#contact-form-card textarea.input {
+  min-height: 120px;
+  height: auto;
+  padding: 14px 16px;
+  resize: vertical;
+}
+
+#contact-form-card .sib-form-block__button.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: var(--color-text-primary);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+}
+
+#contact-form-card .sib-form-block__button.btn:hover {
+  background: #dfbd12;
+}
+
+#contact-form-card .sib-form-message-panel {
+  width: 100%;
+  max-width: none;
+  margin: 0 0 var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  text-align: left;
+}
+
+#contact-form-card #error-message {
+  border-color: #FFCDD2;
+  background: #FFEBEE;
+  color: #B71C1C;
+}
+
+#contact-form-card #success-message {
+  border-color: #A5D6A7;
+  background: #E8F5E9;
+  color: #1B5E20;
+}
+
+#contact-form-card .entry__error--primary,
+#contact-form-card .entry__error--secondary {
+  display: block;
+  margin-top: 4px;
+  font-family: inherit;
+  font-size: var(--font-size-xs);
+}
+
+@media (max-width: 600px) {
+  #contact-form-card #sib-form {
+    grid-template-columns: 1fr;
+  }
+
+  #contact-form-card #sib-form > .sib-form-heading,
+  #contact-form-card #sib-form > .sib-form-city,
+  #contact-form-card #sib-form > .sib-form-submit,
+  #contact-form-card #sib-form > .sib-form-request {
+    grid-column: auto;
+  }
+}

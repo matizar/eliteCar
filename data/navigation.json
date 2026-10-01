@@ -26,9 +26,9 @@
           "description": "Traslados ejecutivos puntuales y seguros"
         },
         {
-          "label": "Alquiler Temporal",
-          "path": "services/alquiler-temporal.html",
-          "description": "Flota flexible por días, semanas o meses"
+          "label": "Transporte VIP",
+          "path": "services/transporte-vip.html",
+          "description": "Transporte VIP con atención personalizada y altos estándares de servicio"
         }
       ]
     },

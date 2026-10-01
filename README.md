@@ -20,7 +20,7 @@ Este sitio web corporativo ha sido desarrollado siguiendo las especificaciones d
 * **Módulo de Beneficios:** Grilla de 6 atributos de valor con iconos vectoriales SVG sobre halos circulares amarillos (`#F2CD16`).
 * **Acordeón FAQ con Imagen Lateral:** Comportamiento accesible (apertura individual, animación fluida de altura, rotación de indicador a 45° y botón *"Mostrar más preguntas"*).
 * **Mapa Interactivo de Cobertura Nacional:** Mapa vectorial de Colombia con pines pulsantes en Bogotá, Medellín, Cali, Barranquilla y Cartagena, tooltips informativos y tarjeta de datos de contacto directo.
-* **Formulario de Contacto Preparado para Brevo CRM:** Validación client-side inmediata, protección anti-spam mediante campo *honeypot* invisible y respuesta visual instantánea.
+* **Formulario conectado con Brevo:** Envía los campos de solicitud al formulario de Brevo y muestra allí los estados de éxito y error; no simula envíos exitosos localmente.
 * **Botón Flotante de WhatsApp:** Retardo de seguridad de 3 segundos antes de desplegarse para evitar bloqueos y scraping, con enlace directo y mensaje predeterminado.
 * **Banner Informativo de Cookies:** Notificación discreta con persistencia de 90 días mediante `localStorage` y cookies estándar.
 * **Páginas Secundarias y Legales Completas:** 3 páginas de servicios específicos (`/services/`) y 4 páginas corporativas y legales (`quienes-somos.html`, `politica-privacidad.html`, `terminos-servicio.html`, `cookies.html`).
@@ -45,7 +45,7 @@ eliteCar/
 │   ├── css/
 │   │   └── styles.css              # Sistema de diseño completo y tokens CSS
 │   ├── js/
-│   │   ├── main.js                 # Validador de formulario, Brevo y utilidades
+│   │   ├── main.js                 # Sincronización del formulario Brevo y utilidades
 │   │   ├── navigation.js           # Menú móvil, sticky header y dropdowns
 │   │   ├── slider.js               # Controlador del Hero Slider
 │   │   ├── carousel.js             # Carrusel de servicios desktop/tablet/mobile
@@ -58,6 +58,9 @@ eliteCar/
 │       ├── hero/
 │       ├── services/
 │       └── map/
+│
+├── scripts/
+│   └── render-home.ps1             # Genera HTML y respaldo JS desde data/*.json
 │
 ├── data/                           # Módulos de datos editables en formato JSON
 │   ├── navigation.json             # Enlaces y estructura del menú
@@ -97,14 +100,33 @@ En la carpeta `data/` se encuentran archivos `.json` que contienen toda la infor
 > 1. Abre el archivo con un editor de texto como **Visual Studio Code**, **Notepad++** o el Bloc de Notas.
 > 2. Modifica únicamente el texto que está entre comillas dobles `" "`.
 > 3. No borres las comas `,` ni los corchetes `{ }` o `[ ]`.
+> 4. Antes de publicar, regenera el HTML y el respaldo local con el comando descrito en la sección 4.
 
-### Opción B: Edición de Textos en los Archivos HTML
+### Opción B: Textos que no provienen de JSON
 
-Para modificar textos directamente en el código de las páginas:
-1. Abre `index.html` o la página interna correspondiente (por ejemplo `quienes-somos.html`).
+Solo los textos que no se administran desde JSON deben editarse directamente en HTML. Para hacerlo:
+1. Abre la página correspondiente (por ejemplo `quienes-somos.html`).
 2. Utiliza la función de búsqueda (`Ctrl + F`) para localizar la frase o palabra que deseas cambiar.
 3. Reemplaza el texto respetando las etiquetas HTML como `<h2>`, `<p>`, `<span>`, etc.
 4. Guarda el archivo con codificación **UTF-8**.
+
+### Generación del contenido de inicio para SEO
+
+`data/*.json` es la fuente de verdad del contenido del inicio. El HTML generado de `index.html` incluye esos mismos textos, enlaces e imágenes desde la respuesta inicial, sin esperar a que el navegador ejecute JavaScript. Esto permite que Google y los rastreadores que no ejecutan JavaScript reciban contenido real y coherente. JavaScript sigue habilitando el carrusel, el acordeón, el mapa y la actualización dinámica en el navegador.
+
+Después de cambiar cualquiera de los JSON, ejecuta desde la raíz del proyecto en Windows:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts\render-home.ps1
+```
+
+El comando genera las secciones administradas por JSON, la imagen social y los datos estructurados de negocio/FAQ en `index.html`; también actualiza `assets/js/data-bundle.js`, usado como respaldo al abrir el sitio con `file://`. Ambos archivos se escriben en UTF-8 sin BOM: el español se conserva como texto legible y se escapan únicamente los caracteres reservados de HTML. Publica ambos archivos junto con los JSON.
+
+Los bloques entre comentarios `JSON:...:START` y `JSON:...:END` son salida generada, no una segunda fuente de contenido. Edita los JSON y vuelve a ejecutar el generador. Si cambias directamente el contenido de uno de esos bloques en `index.html`, se verá hasta la siguiente generación; entonces se reemplazará por lo que diga el JSON. Los cambios fuera de esos bloques no los toca este generador, aunque para contenido administrado la fuente recomendada sigue siendo el JSON.
+
+La página conserva un único `h1` en la primera diapositiva, jerarquía de encabezados semántica, enlaces rastreables y respuestas FAQ incluidas en el HTML. El marcado `FAQPage` también se genera desde el mismo JSON y refleja el contenido visible; su presencia no garantiza resultados enriquecidos en Google. El `robots.txt` permite el rastreo general y publica el sitemap. No se deben servir textos diferentes a robots, ocultar contenido con CSS ni depender de JavaScript como única vía de acceso al contenido.
+
+Para buscadores y plataformas de IA, la estrategia es la misma: contenido útil y original accesible en HTML, páginas rastreables enlazadas entre sí y datos estructurados que coincidan con el contenido visible. Cada plataforma puede tener políticas y capacidades de renderizado distintas; permitir rastreo no garantiza inclusión o citas.
 
 ---
 
@@ -149,16 +171,7 @@ Para modificar el número de teléfono celular al que llegarán los mensajes de 
 4. Si deseas cambiar el mensaje predeterminado, actualiza el parámetro `text=` utilizando codificación de URL (ejemplo: `Hola%20EliteCar...`).
 
 ### 5.2 Formulario de Contacto y Conexión con Brevo CRM
-El formulario de contacto incluye validación en tiempo real y anti-spam. Para conectarlo con tu cuenta de **Brevo (Sendinblue)**:
-1. Abre `assets/js/main.js`.
-2. Localiza la sección `brevoConfig`:
-   ```javascript
-   brevoConfig: {
-     endpointUrl: 'https://tu-endpoint-brevo.com/api/v3/...', // Ingresa aquí la URL de tu Webhook o Formulario de Brevo
-     isDemoMode: false // Cambia a false para activar el envío en producción
-   }
-   ```
-3. Si utilizas un formulario embebido con `<iframe>` o script directo de Brevo, puedes sustituir el `<form id="contact-form">` en `index.html` por el fragmento provisto por Brevo dentro de `<div id="brevo-form-container">`.
+El formulario de `index.html` usa el endpoint de suscripción y los campos de Brevo provistos en `base-form.html`. La ciudad se elige mediante un `select` de opción única; `main.js` serializa la elección como una lista de un elemento en `CIUDAD[]` para conservar el formato que recibe el campo multiselección existente en Brevo. El selector, el correo y los demás campos obligatorios también tienen validación HTML nativa; Brevo controla el envío y sus mensajes de respuesta. Si se cambia el tipo del atributo Ciudad en Brevo, hay que confirmar el formato requerido por el nuevo campo y actualizar la sincronización. Para cambiar el formulario o el destino, reemplaza su endpoint y los nombres de campo con los emitidos por el formulario configurado en Brevo y conserva el script oficial correspondiente. Prueba los envíos desde el sitio desplegado por HTTPS: abrir con `file://` no permite garantizar que los recursos externos o el envío funcionen. Confirma además en Brevo que la lista, automatización y textos de consentimiento coincidan con el uso previsto de estos datos.
 
 ### 5.3 Google Tag Manager y Analítica
 El sitio tiene incorporada la infraestructura de seguimiento mediante `window.dataLayer`. Todos los componentes emiten eventos personalizados:
@@ -167,7 +180,7 @@ El sitio tiene incorporada la infraestructura de seguimiento mediante `window.da
 * `faq_interaction` y `faq_load_more_interaction`: Apertura y lectura de preguntas.
 * `map_interaction`: Clicks sobre los pines de las ciudades de Colombia.
 * `whatsapp_button_visible` y `whatsapp_button_click`: Conversiones a WhatsApp.
-* `form_submit`: Envíos exitosos del formulario de cotización.
+* El formulario remoto de Brevo gestiona el envío; no se emite un evento GTM `form_submit` desde `main.js`.
 
 Para instalar el contenedor de Google Tag Manager de EliteCar, simplemente inserta el código oficial de GTM en la cabecera `<head>` de los archivos HTML.
 
