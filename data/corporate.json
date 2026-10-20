@@ -13,7 +13,7 @@
   "metrics": [
     {
       "value": "+12",
-      "label": "Años de experiencia",
+      "label": "Experiencia",
       "detail": "En movilidad corporativa"
     },
     {
@@ -24,7 +24,7 @@
     {
       "value": "100%",
       "label": "Flota asegurada",
-      "detail": "Pólizas contractuales y extracontractuales"
+      "detail": "Pólizas"
     },
     {
       "value": "24/7",
