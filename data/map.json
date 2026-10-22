@@ -19,7 +19,7 @@
       "id": "bogota",
       "city": "Bogotá D.C.",
       "show": true,
-      "coordinates": { "x": "52%", "y": "38%" },
+      "coordinates": { "x": "49%", "y": "45%" },
       "role": "Sede Principal y Centro de Control 24/7",
       "description": "Flota permanente de +80 vehículos ejecutivos, vanes y transporte masivo."
     },
@@ -27,7 +27,7 @@
       "id": "medellin",
       "city": "Medellín",
       "show": true,
-      "coordinates": { "x": "32%", "y": "34%" },
+      "coordinates": { "x": "40%", "y": "34%" },
       "role": "Base Operativa Antioquia",
       "description": "Servicios ejecutivos para el Valle de Aburrá, Rionegro y zonas industriales."
     },
@@ -35,7 +35,7 @@
       "id": "cali",
       "city": "Cali",
       "show": true,
-      "coordinates": { "x": "30%", "y": "56%" },
+      "coordinates": { "x": "32%", "y": "56%" },
       "role": "Base Operativa Valle del Cauca",
       "description": "Transporte de personal para ingenios, parques industriales y transfer aeropuerto."
     },
