@@ -126,6 +126,16 @@ Los bloques entre comentarios `JSON:...:START` y `JSON:...:END` son salida gener
 
 La página conserva un único `h1` en la primera diapositiva, jerarquía de encabezados semántica, enlaces rastreables y respuestas FAQ incluidas en el HTML. El marcado `FAQPage` también se genera desde el mismo JSON y refleja el contenido visible; su presencia no garantiza resultados enriquecidos en Google. El `robots.txt` permite el rastreo general y publica el sitemap. No se deben servir textos diferentes a robots, ocultar contenido con CSS ni depender de JavaScript como única vía de acceso al contenido.
 
+### Generación del sitemap
+
+El sitemap se genera desde los archivos HTML del proyecto. Antes de publicar, ejecuta desde la raíz:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts\generate-sitemap.ps1
+```
+
+El generador incluye las páginas HTML públicas, usa `https://www.elitecar.com.co`, asigna `/` a `index.html` y excluye `base-form.html` y el archivo de verificación de Google. Al ser un sitio estático, vuelve a ejecutar el comando cuando agregues o elimines páginas HTML; publica el `sitemap.xml` generado. `robots.txt` anuncia el sitemap en el dominio `www`.
+
 Para buscadores y plataformas de IA, la estrategia es la misma: contenido útil y original accesible en HTML, páginas rastreables enlazadas entre sí y datos estructurados que coincidan con el contenido visible. Cada plataforma puede tener políticas y capacidades de renderizado distintas; permitir rastreo no garantiza inclusión o citas.
 
 ---
