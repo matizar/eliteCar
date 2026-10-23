@@ -217,7 +217,7 @@ $whatsappMessage = if ($map.companyInfo.whatsappMessage) {
 $whatsappUrl = 'https://wa.me/' + $whatsappNumber + '?text=' + [System.Uri]::EscapeDataString($whatsappMessage)
 $socialImage = [string]$slider.slides[0].image
 if ($socialImage -notmatch '^https?://') {
-  $socialImage = 'https://elitecar.com.co/' + $socialImage.TrimStart('/')
+  $socialImage = 'https://www.elitecar.com.co/' + $socialImage.TrimStart('/')
 }
 $servedCities = @($map.pins | Where-Object { $_.show -ne $false } | ForEach-Object { $_.city })
 $businessSchema = @{
@@ -226,7 +226,7 @@ $businessSchema = @{
   name = $map.companyInfo.name
   image = $socialImage
   description = $corporate.lead
-  url = 'https://elitecar.com.co/'
+  url = 'https://www.elitecar.com.co/'
   telephone = $footerPhone
   email = $map.companyInfo.email
   address = $footerAddress
