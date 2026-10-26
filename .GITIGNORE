@@ -1,2 +1,3 @@
 /document/*
+!/document/resumen-tecnico-sitio-web.md
 serve.ps1
